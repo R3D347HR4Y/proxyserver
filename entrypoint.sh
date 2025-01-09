@@ -7,8 +7,7 @@ sleep 5  # Give tailscaled time to initialize
 
 # Authenticate Tailscale (use authkey for unattended setups)
 echo "Authenticating Tailscale..."
-tailscale up --authkey=${TAILSCALE_AUTH_KEY} --hostname=${TAILSCALE_HOSTNAME:-"haproxy-server"} --advertise-exit-node
-
+tailscale up --authkey=${TAILSCALE_AUTH_KEY} --hostname=${TAILSCALE_HOSTNAME:-"haproxy-server"}
 # Verify Tailscale is running
 tailscale status
 
