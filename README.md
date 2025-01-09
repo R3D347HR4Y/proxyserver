@@ -98,7 +98,7 @@ curl http://localhost:8088/debug
 
 ## License
 
-[Add your license information here]
+MIT
 
 ## Contributing
 
