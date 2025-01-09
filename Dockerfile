@@ -11,7 +11,8 @@ RUN curl -fsSL https://pkgs.tailscale.com/stable/debian/bullseye.gpg | apt-key a
     echo "deb [signed-by=/usr/share/keyrings/tailscale-archive-keyring.gpg] https://pkgs.tailscale.com/stable/debian bullseye main" | tee /etc/apt/sources.list.d/tailscale.list && \
     apt-get update && \
     apt-get install -y tailscale && \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/* && \
+    haproxy -v
 
 # Copy HAProxy configuration
 COPY haproxy.cfg /etc/haproxy/haproxy.cfg
