@@ -13,4 +13,5 @@ tailscale status
 
 # Start HAProxy
 echo "Starting HAProxy..."
+
 haproxy -f /etc/haproxy/haproxy.cfg
